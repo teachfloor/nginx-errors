@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
-<body class="py-5" onload="javascript:loadDomain();">
+<body class="py-5" onload="javascript:init();">
   <!-- Error Page Content -->
   <div class="container">
     <div class="hero text-center my-4">
@@ -39,12 +39,15 @@
           </div>
         </div>
       </div>
+      <footer>
+        <p class="text-center fw-light opacity-50" style="font-size: 14px;">Teachfloor © <span id="display-year"></span> · All rights reserved</p>
+      </footer>
     </div>
   </div>
   <script type="text/javascript">
-    function loadDomain() {
-      var display = document.getElementById("display-domain");
-      display.innerHTML = document.domain;
+    function init() {
+      document.getElementById("display-domain").innerHTML = document.domain;
+      document.getElementById("display-year").innerHTML = new Date().getFullYear();
     }
   </script>
 </body>
